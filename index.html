@@ -38,27 +38,30 @@
     <section id="products">
         <h2>Our Products</h2>
         <div class="product-listing">
-            <!-- Example Product 1 -->
-            <div class="product-card">
-                <img src="https://media.istockphoto.com/id/1410763926/photo/sports-gear-without-people.jpg?s=612x612&w=0&k=20&c=oGm82fmYkM_My2SIyf90ZoLkRRrxLAfA5cyqPZ5N1U0=" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>$29.99</p>
-                <button onclick="addToCart('Product 1', 29.99)">Add to Cart</button>
-            </div>
-            <!-- Example Product 2 -->
-            <div class="product-card">
-                <img src="https://media.istockphoto.com/id/1336889958/photo/classic-model-toy-car-on-white-background.jpg?s=612x612&w=0&k=20&c=0tSbfJ7cHMjdDM8hVvC45iUhPULYyUHGYJVRTqdgDiQ=" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>$49.99</p>
-                <button onclick="addToCart('Product 2', 49.99)">Add to Cart</button>
-            </div>
-            <!-- Example Product 3 -->
-            <div class="product-card">
-                <img src="https://media.istockphoto.com/id/495732397/photo/black-wi-fi-router.jpg?s=612x612&w=0&k=20&c=KX1g5e0Fx48GZ_jIpSuUP1_jPkp6eAiJYFj2GYCzQoc=" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>$19.99</p>
-                <button onclick="addToCart('Product 3', 19.99)">Add to Cart</button>
-            </div>
+           <!-- Example Product 1 -->
+<div class="product-card">
+    <img src="https://media.istockphoto.com/id/1410763926/photo/sports-gear-without-people.jpg?s=612x612&w=0&k=20&c=oGm82fmYkM_My2SIyf90ZoLkRRrxLAfA5cyqPZ5N1U0=" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>$29.99</p>
+    <button onclick="addToCart('Product 1', 29.99, 'https://media.istockphoto.com/id/1410763926/photo/sports-gear-without-people.jpg?s=612x612&w=0&k=20&c=oGm82fmYkM_My2SIyf90ZoLkRRrxLAfA5cyqPZ5N1U0=')">Add to Cart</button>
+</div>
+
+<!-- Example Product 2 -->
+<div class="product-card">
+    <img src="https://media.istockphoto.com/id/1336889958/photo/classic-model-toy-car-on-white-background.jpg?s=612x612&w=0&k=20&c=0tSbfJ7cHMjdDM8hVvC45iUhPULYyUHGYJVRTqdgDiQ=" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>$49.99</p>
+    <button onclick="addToCart('Product 2', 49.99, 'https://media.istockphoto.com/id/1336889958/photo/classic-model-toy-car-on-white-background.jpg?s=612x612&w=0&k=20&c=0tSbfJ7cHMjdDM8hVvC45iUhPULYyUHGYJVRTqdgDiQ=')">Add to Cart</button>
+</div>
+
+<!-- Example Product 3 -->
+<div class="product-card">
+    <img src="https://media.istockphoto.com/id/495732397/photo/black-wi-fi-router.jpg?s=612x612&w=0&k=20&c=KX1g5e0Fx48GZ_jIpSuUP1_jPkp6eAiJYFj2GYCzQoc=" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>$19.99</p>
+    <button onclick="addToCart('Product 3', 19.99, 'https://media.istockphoto.com/id/495732397/photo/black-wi-fi-router.jpg?s=612x612&w=0&k=20&c=KX1g5e0Fx48GZ_jIpSuUP1_jPkp6eAiJYFj2GYCzQoc=')">Add to Cart</button>
+</div>
+
         </div>
     </section>
 
@@ -80,6 +83,16 @@
             <button type="submit">Place Order</button>
         </form>
     </section>
+<!-- Modal Overlay for Cart Items -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>Your Cart</h3>
+        <div id="modal-cart-items"></div>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
 
     <!-- Footer -->
     <footer>
